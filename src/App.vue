@@ -39,29 +39,36 @@
 
     <!-- 사이드바 -->
     <side-bar></side-bar>
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view/> -->
 
-    <v-main class="main_class">
-      <HelloWorld/>
+    <v-main>
+      <!-- <div class="main-content">
+        <HelloWorld/>
+      </div> -->
+      <div class="chat-container">
+        <ChatInput/>
+      </div>
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+// import HelloWorld from './components/HelloWorld.vue';
 import SideBar from './views/SideBar.vue';
+import ChatInput from './components/ChatInput.vue';
 
 export default Vue.extend({
   name: 'App',
 
   components: {
-    HelloWorld,
-    SideBar
+    // HelloWorld,
+    SideBar,
+    ChatInput
   },
 
   data: () => ({
@@ -70,7 +77,21 @@ export default Vue.extend({
 });
 </script>
 <style>
-.main_class {
-  margin-left: 15rem;  /* sidebar width만큼 떨어트림 */
+/* .main-content {
+  flex-grow: 1;
+  padding: 16px;
+  margin-left: 15rem;
+} */
+
+.chat-container {
+  height: calc(100% - 5rem);
+  position: fixed;
+  bottom: 0;
+  left: 15rem; /* 사이드바 너비 고려 */
+  right: 0;
+  /* width: calc(100% - 15rem); */
+  background-color: white;
+  padding: 16px;
+  box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
 }
 </style>

@@ -25,7 +25,7 @@
     width: 15rem;
     background-color: #e4e4e4;
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    /*z-index: 1;*/ /* Stay on top */
+    z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -36,7 +36,7 @@
     width: 15rem;
     background-color: #777777;
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    /*z-index: 1;*/ /* Stay on top */
+    z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
     overflow-x: hidden; /* Disable horizontal scroll */
